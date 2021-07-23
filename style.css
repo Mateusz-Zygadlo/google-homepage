@@ -1,6 +1,9 @@
 :root{
-    --font-color: gray;
+    --gray: gray;
     --button-color: #4285f4;
+    --background: #FFF;
+    --background-footer: rgb(245, 244, 244);
+    --border-footer: rgb(224, 221, 221);
 }
 *{
     margin: 0;
@@ -10,8 +13,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: white;
-    color: var(--font-color);
+    background-color: var(--background);
+    color: var(--gray);
 }
 header{
     position: absolute;
@@ -19,8 +22,7 @@ header{
     left: 0%;
     width: 100%;
     min-height: 20px;
-    background-color: white;
-    cursor: pointer;
+    background-color: var(--background);
     z-index: 10;
 }
 nav{
@@ -38,11 +40,20 @@ li{
 }
 a{
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--gray);
 }
 a:hover{
     cursor: pointer;
     text-decoration:underline;
+}
+.sign-in{
+    background-color: var(--button-color);
+    border: none;
+    padding: 7px 10px;
+    color: var(--background);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
 }
 main{
     position: absolute;
@@ -55,38 +66,15 @@ main{
     align-items: center;
     flex-direction: column;
 }
-footer{
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    min-height: 20px;
-    background-color: rgb(245, 244, 244);
-    border-top: 1px solid rgb(224, 221, 221);
-}
-.test{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-}
 input{
     width: 550px;
     height: 45px;
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid lightgray;
+    background-color: var(--background);
+    border: 1px solid var(--border-footer);
     text-indent: 40px;
-}
-.button{
-    padding: 10px 20px;
-    margin: 10px;
-    align-items: center;
-    border: none;
-    border-radius: 5px;;
 }
 .icon-mic{
     position: relative;
@@ -98,26 +86,33 @@ input{
     top: 10%;
     left: 7%;
 }
-.sign-in{
-    background-color: var(--button-color);
+.button-search{
+    padding: 10px 20px;
+    margin: 10px;
+    align-items: center;
     border: none;
-    padding: 7px 10px;
-    color: white;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 5px;;
 }
 button{
     cursor: pointer;
 }
 button:hover{
-    border: 1px solid gray;
+    border: 1px solid var(--gray);
 }
 button:focus{
     border: 1px solid var(--button-color);
 }
+footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    min-height: 20px;
+    background-color: var(--background-footer);
+    border-top: 1px solid var(--border-footer);
+}
 @media only screen and (max-width: 650px){
-    .test{
+    footer nav{
         justify-content: space-around;
         align-items: center;
     }
@@ -133,7 +128,7 @@ button:focus{
     .icon-search{
         left: 10%;
     }
-    .button{
+    .button-search{
         margin: 5px;
     }
 }
