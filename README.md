@@ -1,0 +1,1 @@
+I wrote the project in html and css and it wasn't too difficult
